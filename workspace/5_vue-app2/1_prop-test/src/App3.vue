@@ -1,14 +1,15 @@
 <template lang="">
   <h1>유저 정보 조회</h1>
   <ul>
-    <CheckboxItem v-for='user in users' :key='user.number' :user='user' />
+    <CheckboxItem v-for='user in users' :key='user.number'
+      :number='user.number' :name='user.name' :checked='user.checked' />
   </ul>
 </template>
 <script>
-import CheckboxItem from './components/CheckboxItem2.vue';
+import CheckboxItem from './components/CheckboxItem3.vue';
 
   export default {
-    name : 'App2',
+    name : 'App3',
     components : {CheckboxItem},
 
     data() {
@@ -17,7 +18,8 @@ import CheckboxItem from './components/CheckboxItem2.vue';
           { number : 1, name:'류호근', checked : true},
           { number : 2, name:'홍길동'},
           { number : 3, name:'신짱구'},
-          { number : 4, name:'임꺽정', checked : true}
+          { number : 4, name:'임꺽정', checked : true},
+          // { number : 5, checked : true}
         ]
       }
     },
