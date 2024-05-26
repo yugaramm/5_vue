@@ -6,12 +6,12 @@
         <span
             class="pointer"
             :class="item.completed ? 'todo-done' : ''"
-            @click="toggleCompleted(item.id)"
+            @click="emitter.emit('toggle', item.id)"
             >{{ item.plan }} {{ item.completed ? "(완료)" : "" }}</span
         >
         <span
             class="float-end badge bg-secondary pointer"
-            @click="deleteTodo(item.id)"
+            @click="emitter.emit('delete', item.id)"
             >삭제</span
         >
     </li>
